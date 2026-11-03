@@ -23,6 +23,8 @@ jobs:
       - run: npm ci --prefix frontend
       - run: npm run build --prefix frontend
         env:
+          VITE_SUPABASE_PUBLIC_API: https://obwzrgisatezcjaybjzu.supabase.co/functions/v1/municipal-public-api
+          VITE_SUPABASE_PUBLISHABLE_KEY: sb_publishable_BXAhUaNEmWo3eR28c0lbRw_iGt5txHw
           # With no hosted API, Pages remains a complete read-only public demo.
           # Set repository variable PUBLIC_API_URL to https://your-service/api
           # to turn Pages into a live frontend for the hosted Express API.
@@ -34,3 +36,4 @@ jobs:
         with: {path: frontend/dist}
       - id: deployment
         uses: actions/deploy-pages@v4
+
