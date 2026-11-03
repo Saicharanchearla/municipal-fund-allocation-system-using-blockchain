@@ -1,0 +1,14 @@
+name: Deploy
+# A VPS deployment requires DEPLOY_HOST, DEPLOY_USER and DEPLOY_KEY secrets.
+# Keep it manual so a missing private server configuration never makes a
+# normal GitHub Pages release appear as failed.
+on:
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy by SSH
+        uses: appleboy/ssh-action@v1.2.0
+        with: {host: '${{ secrets.DEPLOY_HOST }}', username: '${{ secrets.DEPLOY_USER }}', key: '${{ secrets.DEPLOY_KEY }}', script: 'bash /opt/municipal-fund/devops/deploy.sh'}
