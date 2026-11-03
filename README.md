@@ -1,6 +1,8 @@
 # Municipal Fund Allocation System Using Blockchain
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/NithinKumarKondabattini/municipal-fund-allocation-system-using-blockchain)
+> Personal repository copy maintained by [Saicharanchearla](https://github.com/Saicharanchearla). Original project team credits remain below. The upstream repository did not include a license file.
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Saicharanchearla/municipal-fund-allocation-system-using-blockchain)
 
 A student-ready full-stack project that makes municipal allocations, spending approvals, document proofs and public project data transparent. Financial values are stored as integer **paise**; blockchain gas is never treated as municipal money.
 
@@ -249,3 +251,4 @@ The repository includes render.yaml for a combined Express API and React site de
 After Render gives the service a URL, open the deployed service URL directly for the complete system. To point the GitHub Pages frontend at that API, add a GitHub repository variable named PUBLIC_API_URL with the Render URL followed by /api, then redeploy the Pages workflow. This keeps GitHub Pages as the frontend while Render runs the authenticated API.
 
 For a production installation, replace ephemeral SQLite storage with Render Postgres or a persistent disk and store uploads in object storage.
+
